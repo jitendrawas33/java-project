@@ -60,7 +60,7 @@ pipeline {
      when {
          branch 'master'
      }
-      # steps {
+       steps {
         sh "cp /var/www/html/rectangles/all/rectangle_${env.BUILD_NUMBER}.jar /var/www/html/rectangles/green/rectangle_${env.BUILD_NUMBER}.jar"
             }
 }
@@ -80,6 +80,7 @@ pipeline {
          sh 'git checkout master'
          echo "Merging Development into Master Branch"
          sh 'git merge development'
+         echo "put some space"
          echo "Pushing to origin master"
          sh 'git push https://jitendrawas33:jitU#123@github.com/jitendrawas33/java-project.git master'
       }
