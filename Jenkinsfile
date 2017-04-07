@@ -63,7 +63,6 @@ pipeline {
         sh "cp /var/www/html/rectangles/all/rectangle_${env.BUILD_NUMBER}.jar /var/www/html/rectangles/green/rectangle_${env.BUILD_NUMBER}.jar"
             }
 }
-  }
        stage('promote Development Branch to Master') {
         agent {
           label 'Apache'
@@ -85,4 +84,4 @@ pipeline {
       }
      }
  }
-
+}
